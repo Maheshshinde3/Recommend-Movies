@@ -6,8 +6,8 @@ import requests
 import time
 import os
 
-api_key = st.secrets["TMDB_API_KEY"]
-# api_key = os.getenv("API_KEY")
+# api_key = st.secrets["TMDB_API_KEY"]
+api_key = os.environ.get('TMDB_API_KEY')
 movies_list = pickle.load(open("allmovies.pkl","rb"))
 distanc = joblib.load(open("distance.pkl","rb"))
 
