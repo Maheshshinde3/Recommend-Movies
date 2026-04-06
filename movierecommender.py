@@ -8,8 +8,8 @@ import os
 
 # api_key = st.secrets["TMDB_API_KEY"]
 api_key = os.environ.get('TMDB_API_KEY')
-movies_list = pickle.load(open("allmovies.pkl","rb"))
-distanc = joblib.load(open("distance.pkl","rb"))
+movies_list = pickle.load(open("models/allmovies.pkl","rb"))
+distanc = joblib.load(open("models/distance.pkl","rb"))
 
 def fetch_poster(movies_ids,session):
     try:
